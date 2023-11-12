@@ -1,13 +1,250 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Sofia Sans Extra Condensed', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #1d1d1d;
 }
+
+.navbar {
+  background: rgb(27, 27, 27);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.container_ {
+  z-index: 1;
+  width: 100%;
+  max-width: 1500px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.navbar-logo {
+  width: 300px;
+  position: relative;
+  top: -60px;
+
+}
+
+
+.navbar-icon {
+  margin-right: 0.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  height: 80px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid #ddb500;
+  overflow: hidden;
+}
+
+.nav-links {
+  color: #e4e4e4;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  font-size: 30px;
+}
+
+.activated {
+  color: #ddb500;
+  text-transform: uppercase;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: rgb(27, 27, 27);
+    left: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    color: #ddb500;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+  }
+
+  .nav-item:hover {
+    border: none;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .navbar-logo {
+    width: 300px;
+    position: absolute;
+    top: -60px;
+    left: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+/* ============== */
+/* FOOTER SECTION */
+/* ============== */
+
+.footer {
+  width: 100%;
+  margin: 30px 0 0 0;
+  bottom: 0px;
+  background-color: rgb(28, 28, 28);
+}
+
+.footer__container {
+  border-top: 1.5px solid goldenrod;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(150px, auto));
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+}
+
+.footer__img {
+  object-fit: cover;
+}
+
+.footer__list {
+  list-style: none;
+  color: #4d4d4d;
+}
+
+.footer__text{
+  font-size: 20px;
+}
+
+.footer__text2 {
+  display: none;
+}
+
+.footer__text2--link {
+  text-decoration: none;
+  color: rgb(107, 107, 107);
+}
+
+.footer__text2--link:hover {
+  color: rgb(255, 204, 0);
+}
+
+.footer__icons {
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icons a {
+  text-decoration: none;
+}
+
+.footer__icon {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+}
+
+@media (min-width: 600px) {
+  .footer {
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+
+  .footer__container {
+    border-top: 1.5px solid rgba(181, 132, 9, 0.574);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    margin: 0 15px;
+  }
+
+  .footer__list {
+    list-style: none;
+    color: rgb(80, 80, 80)
+  }
+
+  .footer__text2 {
+    display: block;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
