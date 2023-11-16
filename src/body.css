@@ -149,9 +149,132 @@
   margin: 30px 10px;
   font-size: 25px;
 }
-.About__text--1, .About__text--2, .About__text--3{
+.About__text--1,
+.About__text--2,
+.About__text--3{
   margin-bottom: 20px;
 }
+
+
+
+/* ============ */
+/* SERVICE PAGE */
+/* ============ */
+
+.ServicesAbout__Title{
+  color: goldenrod;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.Card__section{
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(360px, auto));
+}
+
+/* .ServiceCard{
+  width: 350px;
+  height: 400px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  row-gap: 2rem;
+
+}
+
+.ServiceCard__container{
+  width: 100%;
+  height: 400px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  row-gap: 2em;
+  border-radius: 15px;
+}
+
+.ServiceCard__container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background:  radial-gradient(rgba(0, 0, 0, 0.7), rgba(79, 79, 79, 0.7));
+}
+
+.ServiceCard__container--text{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background-color: #1d1d1d;
+  width: 100%;
+  text-align: center;
+}
+.ServiceCard__container--text:hover{
+  cursor: pointer;
+  transform: translateY(-70%);
+  transition: 500ms all ease-in-out;
+} */
+
+.card__sites{
+  color: white;
+  margin: 30px;
+  height: 450px;
+  width: 360px;
+  border-radius: 25px;  
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+  .card__sites:hover{
+    transform: scale(1.05);
+  }
+
+  .card__info--sites{
+    padding: 0 1.5rem;
+    background: rgba(26, 26, 26, 0.389);
+  }
+
+  .card__title--sites{
+    letter-spacing: .2rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 35px auto;
+    text-align: center;
+  }
+
+  .card__text--sites{
+    color:wheat;
+    text-align: center;
+    
+  }
+
+  .card__bg{
+    display: flex;
+    position: absolute;
+    width: 360px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  @media (hover) {
+    .card__info--sites{  
+    transform: translateY(220%);
+    transition: transform 700ms ease;  
+  }
+    .card__sites:hover .card__info--sites{
+    transform: translateY(80%);
+    transition-delay: 500ms
+
+  }
+  }
 
 
 /* ============ */
@@ -244,6 +367,10 @@
     font-size: 3rem;
   }
 
+  .ServicesAbout__Title{
+    font-size: 4rem;
+  }
+
   /* ========== */
   /* ABOUT PAGE */
   /* ========== */
@@ -269,6 +396,10 @@
 @media (min-width: 1600px) {
   .Services__btn {
     display: none;
+  }
+
+  .ServicesAbout__Title{
+    font-size: 5rem;
   }
 
   .Goals__container--item{
